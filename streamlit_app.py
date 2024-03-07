@@ -9,7 +9,7 @@ from code import coursework_text
 
 def main():
     # Title
-    st.title("ying bing loves a math!!!!11!11!!")
+    st.markdown("# ying bing loves :rainbow[a math]!!!!11!11!!")
     st.write("das so cool")
 
     # Checkbox for A1
