@@ -1,8 +1,8 @@
-
 import streamlit as st
 
 from coursework.coursework import coursework
 from capitaliser.capitaliser import capitaliser
+from willhem.willhem import willhem
 
 # Importing code display stuff
 from code.capitaliser_text import text as capitaliser_text
@@ -28,6 +28,11 @@ def main():
     st.write("---")
     st.subheader("Coursework wooo")
     coursework_section()
+
+    # willhem
+    st.write("---")
+    st.subheader("lore accurate willonthouehm name")
+    willhem()
 
     # Code display
     st.write("---")
