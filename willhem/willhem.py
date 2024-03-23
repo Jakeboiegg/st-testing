@@ -35,7 +35,6 @@ def willhem():
 
     number = st.slider("length of will---em name", 0, highest_value)
 
-    st.write("name")
     with st.container(border=True):
         if number == 0:
             st.write()
