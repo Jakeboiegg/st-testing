@@ -40,8 +40,11 @@ def willhem():
         if number == 0:
             st.write()
 
-        elif 1 <= number <= 7:
+        elif 1 <= number <= 6:
             st.write(willhem[number - 1])
+
+        elif number == 7:
+            st.markdown(":rainbow[willhem]")
 
         elif 8 <= number <= highest_value:
             fluff = random_fluff(number - 7)
