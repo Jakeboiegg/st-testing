@@ -1,11 +1,13 @@
 
 import streamlit as st
+
 from coursework.coursework import coursework
 from capitaliser.capitaliser import capitaliser
 
 # Importing code display stuff
-from code import capitaliser_text
-from code import coursework_text
+from code.capitaliser_text import text as capitaliser_text
+from code.coursework_text import text as coursework_text
+
 
 def main():
     # Title
@@ -19,10 +21,12 @@ def main():
 
     # Text capitaliser
     st.write("---")
+    st.subheader("funny text capitaliser")
     text_capitaliser()
 
     # Coursework
     st.write("---")
+    st.subheader("Coursework wooo")
     coursework_section()
 
     # Code display
@@ -33,13 +37,13 @@ def main():
     st.write("---")
     github_link()
 
+
 def text_capitaliser():
-    st.subheader("funny text capitaliser")
     prompt = st.text_input("input here: ", value="hee hee heeeee haweeeeeewwww")
     st.write(capitaliser(prompt))
 
+
 def coursework_section():
-    st.subheader("Coursework wooo")
     prompt = st.text_input("How are you feeling?", value="im very happy :)")
     output = coursework(prompt)
 
@@ -51,18 +55,20 @@ def coursework_section():
         st.link_button("Play video", output[3])
         st.write(output[2])
 
+
 def code_display():
     option = st.selectbox("code to display", ("capitaliser", "coursework"))
 
     if option == "capitaliser":
-        st.code(capitaliser_text.text)
+        st.code(capitaliser_text)
     elif option == "coursework":
-        st.code(coursework_text.text)
+        st.code(coursework_text)
+
 
 def github_link():
     st.subheader("The github")
     st.link_button("Github :100:", "https://github.com/Jakeboiegg/st-testing.git")
 
+
 if __name__ == "__main__":
     main()
-
