@@ -3,7 +3,6 @@ import streamlit as st
 from coursework.coursework import coursework
 from capitaliser.capitaliser import capitaliser
 from willhem.willhem import willhem
-from code_display.code_display import code_display
 
 
 def main():
@@ -31,10 +30,6 @@ def main():
     st.write("---")
     st.subheader("lore accurate willonthouehm name")
     willhem()
-
-    # Code display
-    st.write("---")
-    code_display()
 
     # Link to GitHub
     st.write("---")
