@@ -24,14 +24,14 @@ def coursework(text):
             not_detected = True
 
         if word in happy_list:
-            if not_detected == True:
+            if not not_detected:
                 emotion_arr[1] += 1
                 not_detected = False
             else:
                 emotion_arr[0] += 1
 
         if word in sad_list:
-            if not_detected == True:
+            if not not_detected:
                 emotion_arr[0] += 1
                 not_detected = False
             else:
