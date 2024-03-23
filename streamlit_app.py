@@ -16,8 +16,9 @@ def main():
 
     # Checkbox for A1
     option = st.checkbox("click 4 A1 math")
-    if option:
-        st.write("user has been bleesed with a1")
+    with st.container(border=True):
+        if option:
+            st.write("user has been bleesed with a1")
 
     # Text capitaliser
     st.write("---")
@@ -45,7 +46,8 @@ def main():
 
 def text_capitaliser():
     prompt = st.text_input("input here: ", value="hee hee heeeee haweeeeeewwww")
-    st.write(capitaliser(prompt))
+    with st.container(border=True):
+        st.write(capitaliser(prompt))
 
 
 def coursework_section():
@@ -53,12 +55,13 @@ def coursework_section():
     output = coursework(prompt)
 
     # Output format [emotion, message1, message2, url]
-    if output[0] == 0:
-        st.write(output[1])
-    else:
-        st.write(output[1])
-        st.link_button("Play video", output[3])
-        st.write(output[2])
+    with st.container(border=True):
+        if output[0] == 0:
+            st.write(output[1])
+        else:
+            st.write(output[1])
+            st.link_button("Play video", output[3])
+            st.write(output[2])
 
 
 def code_display():
